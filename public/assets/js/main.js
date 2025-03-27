@@ -29,18 +29,19 @@ $(function () {
             success: function (res) {
                 res = JSON.parse(res);
                 if (res.status === 'success') {
-                    console.log(res.data);
+                    toastr.success(res.data);
                     form.trigger('reset');
                     if (res.redirect) {
                         location = res.redirect;
                     }
                 } else {
-                    console.log(res.data);
+                    toastr.error(res.data);
                 }
                 btn.prop('disabled', false).text(btnText);
             },
             error: function () {
-                alert('Error!');
+                toastr.error('Error!');
+                //alert('Error!');
                 btn.prop('disabled', false).text(btnText);
             },
         });

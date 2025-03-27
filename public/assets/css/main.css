@@ -1,0 +1,19 @@
+#toast-container > div {
+    opacity: 1;
+}
+
+#toast-container.toast-top-full-width > div {
+    width: 100%;
+}
+
+.toast-success {
+    background-color: #51a351;
+}
+
+.toast-error {
+    background-color: #bd362f;
+}
+
+#toast-container ul {
+    list-style: none;
+}
